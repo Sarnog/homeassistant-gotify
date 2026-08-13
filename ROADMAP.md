@@ -44,6 +44,15 @@ De geschiedenis van wat er al gebouwd en gewijzigd is, staat **niet** hier maar 
 - **Opname in de standaard HACS-store.** Nu te installeren als custom repository. Een
   aanvraag bij [hacs/default](https://github.com/hacs/default) is pas zinvol nadat deze
   fork zich in de praktijk bewezen heeft.
+- **Automatisch een Gotify-server op het netwerk vinden.** *Onderzocht op 2026-08-13 en
+  voorlopig afgeschreven.* Home Assistant kan alleen ontdekken wat zichzelf aankondigt,
+  en de broncode van `gotify/server` bevat geen enkele verwijzing naar mDNS, zeroconf,
+  Bonjour, Avahi, SSDP of UPnP - een Gotify-server laat dus niets van zich horen.
+  DHCP-discovery valt af omdat die op MAC-adressen en hostnames van fysieke apparaten
+  matcht. Blijven over: discovery via de Supervisor (alleen als Gotify als HA-app
+  draait én die app zich aanmeldt) of zelf het subnet afscannen op `/version`, wat Home
+  Assistant afraadt. Bovendien moet het applicatietoken hoe dan ook met de hand uit
+  Gotify gehaald worden, dus discovery zou alleen het intypen van de URL besparen.
 
 ## EN
 
@@ -88,3 +97,12 @@ The history of what has already been built and changed is **not** here but in th
 - **Inclusion in the default HACS store.** Currently installable as a custom repository.
   A request at [hacs/default](https://github.com/hacs/default) only makes sense once this
   fork has proven itself in practice.
+- **Automatically finding a Gotify server on the network.** *Investigated on 2026-08-13
+  and shelved for now.* Home Assistant can only discover what announces itself, and the
+  `gotify/server` source contains no reference to mDNS, zeroconf, Bonjour, Avahi, SSDP or
+  UPnP at all - a Gotify server stays silent. DHCP discovery is out because it matches on
+  MAC addresses and hostnames of physical devices. That leaves discovery via the
+  Supervisor (only if Gotify runs as a HA app and that app registers itself) or scanning
+  the subnet for `/version` yourself, which Home Assistant advises against. On top of
+  that, the application token has to be copied from Gotify by hand regardless, so
+  discovery would only save typing the URL.
