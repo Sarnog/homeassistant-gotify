@@ -15,6 +15,12 @@
 Een integratie voor Home Assistant om notificaties te sturen via [Gotify](https://gotify.net/),
 met een eigen prioriteit en extra's zoals een klik-URL of een afbeelding.
 
+> **Dit is een fork van [1RandomDev/homeassistant-gotify](https://github.com/1RandomDev/homeassistant-gotify).**
+> Het oorspronkelijke notify-platform is het werk van [1RandomDev](https://github.com/1RandomDev);
+> deze fork wordt onderhouden door [Sarnog](https://github.com/Sarnog) en voegt daar vanaf
+> versie 2.0.0 configuratie via de UI aan toe, in plaats van via `configuration.yaml`.
+> Zie [Overstappen vanaf YAML](#overstappen-vanaf-yaml) als je van het origineel komt.
+
 <!-- Tabel zodat de labels en de knoppen in twee nette, uitgelijnde kolommen
      staan die zich op elk scherm aanpassen. -->
 <table>
@@ -208,6 +214,12 @@ commits komende. Volledig vrijblijvend, uiteraard!
 
 A Home Assistant integration for sending notifications via [Gotify](https://gotify.net/),
 with a custom priority and extras such as a click URL or an image.
+
+> **This is a fork of [1RandomDev/homeassistant-gotify](https://github.com/1RandomDev/homeassistant-gotify).**
+> The original notify platform is the work of [1RandomDev](https://github.com/1RandomDev);
+> this fork is maintained by [Sarnog](https://github.com/Sarnog) and, as of version 2.0.0,
+> adds configuration through the UI instead of through `configuration.yaml`.
+> See [Migrating from YAML](#migrating-from-yaml) if you are coming from the original.
 
 <!-- Table so the labels and the buttons sit in two neat, aligned columns
      that adapt to any screen size. -->
