@@ -13,10 +13,10 @@ De geschiedenis van wat er al gebouwd en gewijzigd is, staat **niet** hier maar 
 
 ### Should have
 
-- **Testen in een echte Home Assistant.** De config flow, de import vanuit YAML en het
-  opruimen bij unload zijn geverifieerd tegen de Home Assistant-broncode, maar de
-  volledige flow is nog niet in een draaiende instantie doorlopen (zie
-  [`tests/README.md`](tests/README.md) voor waarom de testsuite dat niet dekt).
+- **De YAML-import in de praktijk beproeven.** Toevoegen via de UI en het versturen met
+  prioriteiten zijn in een draaiende Home Assistant bevestigd, maar het overnemen van een
+  bestaand `notify:`-blok is alleen tegen de Home Assistant-broncode geverifieerd - nog
+  niet met een echte YAML-configuratie doorlopen.
 - **Ondersteuning voor `target`.** Een Gotify-server kan meerdere applicaties hebben,
   elk met een eigen token. Met `targets` in de notify-service zou één integratie-entry
   naar meerdere applicaties kunnen sturen (`notify.gotify_werk` naast
@@ -67,10 +67,10 @@ The history of what has already been built and changed is **not** here but in th
 
 ### Should have
 
-- **Test in a real Home Assistant.** The config flow, the YAML import and the cleanup on
-  unload have been verified against the Home Assistant source, but the full flow has not
-  yet been walked through in a running instance (see [`tests/README.md`](tests/README.md)
-  for why the test suite does not cover that).
+- **Try the YAML import in practice.** Adding a server through the UI and sending with
+  priorities are confirmed in a running Home Assistant, but importing an existing
+  `notify:` block has only been verified against the Home Assistant source - not yet
+  walked through with a real YAML configuration.
 - **Support for `target`.** A Gotify server can have multiple applications, each with
   its own token. With `targets` on the notify service a single integration entry could
   send to several applications (`notify.gotify_work` next to `notify.gotify_home`)
