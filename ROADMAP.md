@@ -15,8 +15,11 @@ De geschiedenis van wat er al gebouwd en gewijzigd is, staat **niet** hier maar 
 
 - **De YAML-import in de praktijk beproeven.** Toevoegen via de UI en het versturen met
   prioriteiten zijn in een draaiende Home Assistant bevestigd, maar het overnemen van een
-  bestaand `notify:`-blok is alleen tegen de Home Assistant-broncode geverifieerd - nog
-  niet met een echte YAML-configuratie doorlopen.
+  bestaand `notify:`-blok is alleen tegen de Home Assistant-broncode geverifieerd. De
+  beheerder van deze fork kwam pas bij versie 2.0.0 binnen en heeft dus nooit een
+  YAML-configuratie gehad om mee te testen; bevestiging moet daarom van een gebruiker
+  komen die vanaf het origineel overstapt. Werkt het bij jou (of juist niet), meld het
+  dan via een issue.
 - **Ondersteuning voor `target`.** Een Gotify-server kan meerdere applicaties hebben,
   elk met een eigen token. Met `targets` in de notify-service zou één integratie-entry
   naar meerdere applicaties kunnen sturen (`notify.gotify_werk` naast
@@ -69,8 +72,10 @@ The history of what has already been built and changed is **not** here but in th
 
 - **Try the YAML import in practice.** Adding a server through the UI and sending with
   priorities are confirmed in a running Home Assistant, but importing an existing
-  `notify:` block has only been verified against the Home Assistant source - not yet
-  walked through with a real YAML configuration.
+  `notify:` block has only been verified against the Home Assistant source. This fork's
+  maintainer only came aboard at version 2.0.0 and so never had a YAML configuration to
+  test with; confirmation therefore has to come from a user migrating from the original.
+  If it works for you (or doesn't), please open an issue.
 - **Support for `target`.** A Gotify server can have multiple applications, each with
   its own token. With `targets` on the notify service a single integration entry could
   send to several applications (`notify.gotify_work` next to `notify.gotify_home`)
