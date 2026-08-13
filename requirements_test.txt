@@ -1,0 +1,9 @@
+# Dev-dependencies om custom_components/gotify te linten en testen.
+# Installeer met: pip install -r requirements_test.txt
+#
+# Zie tests/README.md voor waarom hier geen pytest-homeassistant-custom-component
+# in staat (werkt niet op Windows zonder WSL/Docker).
+homeassistant
+pytest
+pytest-asyncio
+ruff

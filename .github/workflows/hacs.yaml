@@ -1,0 +1,20 @@
+name: HACS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hacs/action@main
+        with:
+          category: integration
+          # De domeinnaam `gotify` staat niet in home-assistant/brands; dat is
+          # alleen nodig voor opname in de standaard HACS-store.
+          ignore: brands
