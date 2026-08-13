@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Gotify-server toevoegen",
+        "description": "Vul de URL van je Gotify-server en een applicatietoken in. Het token maak je aan in Gotify onder Apps.",
+        "data": {
+          "name": "Naam",
+          "url": "URL",
+          "token": "Applicatietoken",
+          "verify_ssl": "SSL-certificaat controleren",
+          "msg_blacklist": "Geblokkeerde berichten"
+        },
+        "data_description": {
+          "name": "Bepaalt de servicenaam: een naam als \"Mijn Gotify\" wordt notify.mijn_gotify.",
+          "url": "De basis-URL van je Gotify-server, bijvoorbeeld https://gotify.voorbeeld.nl.",
+          "token": "Een applicatietoken uit Gotify (Apps > applicatie aanmaken). Een clienttoken werkt niet.",
+          "verify_ssl": "Zet dit alleen uit als je server een zelfondertekend certificaat gebruikt.",
+          "msg_blacklist": "Berichten waarvan de tekst precies overeenkomt met een van deze regels worden weggegooid in plaats van verstuurd."
+        }
+      },
+      "reconfigure": {
+        "title": "Gotify-server wijzigen",
+        "description": "Bij een naamswijziging verandert ook de naam van de notify-service, dus automations die de oude naam gebruiken moeten aangepast worden.",
+        "data": {
+          "name": "Naam",
+          "url": "URL",
+          "token": "Applicatietoken",
+          "verify_ssl": "SSL-certificaat controleren",
+          "msg_blacklist": "Geblokkeerde berichten"
+        },
+        "data_description": {
+          "name": "Bepaalt de servicenaam: een naam als \"Mijn Gotify\" wordt notify.mijn_gotify.",
+          "url": "De basis-URL van je Gotify-server, bijvoorbeeld https://gotify.voorbeeld.nl.",
+          "token": "Een applicatietoken uit Gotify (Apps > applicatie aanmaken). Een clienttoken werkt niet.",
+          "verify_ssl": "Zet dit alleen uit als je server een zelfondertekend certificaat gebruikt.",
+          "msg_blacklist": "Berichten waarvan de tekst precies overeenkomt met een van deze regels worden weggegooid in plaats van verstuurd."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Gotify-token niet meer geldig",
+        "description": "Het applicatietoken van {name} werd afgewezen. Vul een nieuw token in.",
+        "data": {
+          "token": "Applicatietoken"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Op deze URL is geen Gotify-server te bereiken.",
+      "invalid_auth": "Gotify wees dit applicatietoken af.",
+      "name_in_use": "Er bestaat al een Gotify-server met deze naam."
+    },
+    "abort": {
+      "already_configured": "Deze Gotify-server is met dit token al toegevoegd.",
+      "name_in_use": "Er bestaat al een Gotify-server met deze naam.",
+      "cannot_connect": "Op deze URL is geen Gotify-server te bereiken.",
+      "invalid_auth": "Gotify wees dit applicatietoken af.",
+      "reauth_successful": "Het nieuwe token is opgeslagen.",
+      "reconfigure_successful": "De Gotify-server is bijgewerkt."
+    }
+  },
+  "issues": {
+    "deprecated_yaml": {
+      "title": "Gotify-configuratie via YAML verdwijnt",
+      "description": "Gotify instellen in configuration.yaml wordt niet meer ondersteund. Je bestaande configuratie is automatisch overgenomen in de UI.\n\nHaal het Gotify-blok uit het `notify:`-gedeelte van je configuration.yaml en herstart Home Assistant om deze melding op te lossen."
+    },
+    "deprecated_yaml_import_failed_cannot_connect": {
+      "title": "Gotify-configuratie uit YAML kon niet overgenomen worden",
+      "description": "De Gotify-configuratie van {name} in configuration.yaml kon niet overgenomen worden, omdat de server niet bereikbaar was.\n\nControleer of de server draait en bereikbaar is en herstart Home Assistant, of voeg de server handmatig toe via Instellingen > Apparaten en diensten."
+    },
+    "deprecated_yaml_import_failed_invalid_auth": {
+      "title": "Gotify-configuratie uit YAML kon niet overgenomen worden",
+      "description": "De Gotify-configuratie van {name} in configuration.yaml kon niet overgenomen worden, omdat het applicatietoken werd afgewezen.\n\nMaak een nieuw applicatietoken aan in Gotify en voeg de server handmatig toe via Instellingen > Apparaten en diensten."
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "De Gotify-server op {url} is niet bereikbaar."
+    },
+    "invalid_auth": {
+      "message": "Gotify wees het applicatietoken af. Vul via de reparatiemelding een nieuw token in."
+    },
+    "send_failed": {
+      "message": "Het bericht kon niet naar Gotify verstuurd worden: {error}"
+    }
+  }
+}

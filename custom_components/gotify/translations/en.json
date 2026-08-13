@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add a Gotify server",
+        "description": "Enter the URL of your Gotify server and an application token. Create the token in Gotify under Apps.",
+        "data": {
+          "name": "Name",
+          "url": "URL",
+          "token": "Application token",
+          "verify_ssl": "Verify SSL certificate",
+          "msg_blacklist": "Blocked messages"
+        },
+        "data_description": {
+          "name": "Determines the service name: a name like \"My Gotify\" becomes notify.my_gotify.",
+          "url": "The base URL of your Gotify server, for example https://gotify.example.com.",
+          "token": "An application token from Gotify (Apps > Create application). A client token will not work.",
+          "verify_ssl": "Turn this off only if your server uses a self-signed certificate.",
+          "msg_blacklist": "Messages whose text matches one of these entries exactly are discarded instead of sent."
+        }
+      },
+      "reconfigure": {
+        "title": "Change the Gotify server",
+        "description": "Renaming also renames the notify service, so any automation using the old name has to be updated.",
+        "data": {
+          "name": "Name",
+          "url": "URL",
+          "token": "Application token",
+          "verify_ssl": "Verify SSL certificate",
+          "msg_blacklist": "Blocked messages"
+        },
+        "data_description": {
+          "name": "Determines the service name: a name like \"My Gotify\" becomes notify.my_gotify.",
+          "url": "The base URL of your Gotify server, for example https://gotify.example.com.",
+          "token": "An application token from Gotify (Apps > Create application). A client token will not work.",
+          "verify_ssl": "Turn this off only if your server uses a self-signed certificate.",
+          "msg_blacklist": "Messages whose text matches one of these entries exactly are discarded instead of sent."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Gotify token no longer valid",
+        "description": "The application token for {name} was rejected. Enter a new token.",
+        "data": {
+          "token": "Application token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach a Gotify server at this URL.",
+      "invalid_auth": "Gotify rejected this application token.",
+      "name_in_use": "A Gotify server with this name already exists."
+    },
+    "abort": {
+      "already_configured": "This Gotify server has already been added with this token.",
+      "name_in_use": "A Gotify server with this name already exists.",
+      "cannot_connect": "Could not reach a Gotify server at this URL.",
+      "invalid_auth": "Gotify rejected this application token.",
+      "reauth_successful": "The new token has been saved.",
+      "reconfigure_successful": "The Gotify server has been updated."
+    }
+  },
+  "issues": {
+    "deprecated_yaml": {
+      "title": "Gotify YAML configuration is being removed",
+      "description": "Configuring Gotify in configuration.yaml is no longer supported. Your existing configuration has been imported into the UI automatically.\n\nRemove the Gotify block from the `notify:` section of your configuration.yaml and restart Home Assistant to resolve this issue."
+    },
+    "deprecated_yaml_import_failed_cannot_connect": {
+      "title": "Gotify YAML configuration could not be imported",
+      "description": "The Gotify configuration for {name} in configuration.yaml could not be imported, because the server could not be reached.\n\nCheck whether the server is running and reachable, then restart Home Assistant, or add the server manually under Settings > Devices & services."
+    },
+    "deprecated_yaml_import_failed_invalid_auth": {
+      "title": "Gotify YAML configuration could not be imported",
+      "description": "The Gotify configuration for {name} in configuration.yaml could not be imported, because the application token was rejected.\n\nCreate a new application token in Gotify and add the server manually under Settings > Devices & services."
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Could not reach the Gotify server at {url}."
+    },
+    "invalid_auth": {
+      "message": "Gotify rejected the application token. Enter a new token via the repair notification."
+    },
+    "send_failed": {
+      "message": "Sending the message to Gotify failed: {error}"
+    }
+  }
+}
