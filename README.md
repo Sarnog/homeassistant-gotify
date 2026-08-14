@@ -190,6 +190,11 @@ Deze integratie is een fork van
 waarop het oorspronkelijke YAML-notify-platform gebouwd is. Deze fork voegt daar
 configuratie via de UI, asynchrone HTTP-aanroepen en meertalige teksten aan toe.
 
+Het pictogram is het logo van [Gotify](https://github.com/gotify/logo), gebruikt onder de
+[CC BY 4.0-licentie](http://creativecommons.org/licenses/by/4.0/) en alleen bijgesneden en
+verkleind. De oorspronkelijke Go-gopher is ontworpen door
+[Renee French](http://reneefrench.blogspot.com/).
+
 ### Licentie
 
 Het hele project valt onder de [GPL-3-licentie](https://www.gnu.org/licenses/gpl-3.0.html).
@@ -388,6 +393,11 @@ This integration is a fork of
 [1RandomDev/homeassistant-gotify](https://github.com/1RandomDev/homeassistant-gotify),
 which the original YAML notify platform was built on. This fork adds UI configuration,
 asynchronous HTTP calls and translated texts on top of that.
+
+The icon is the [Gotify](https://github.com/gotify/logo) logo, used under the
+[CC BY 4.0 license](http://creativecommons.org/licenses/by/4.0/) and only cropped and
+resized. The original Go gopher was designed by
+[Renee French](http://reneefrench.blogspot.com/).
 
 ### License
 
