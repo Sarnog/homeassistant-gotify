@@ -15,6 +15,6 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
-          # De domeinnaam `gotify` staat niet in home-assistant/brands; dat is
-          # alleen nodig voor opname in de standaard HACS-store.
-          ignore: brands
+          # Geen `ignore:` hier. Voor opname in de standaard HACS-store moet
+          # deze actie slagen zonder genegeerde checks, en de brands-check
+          # slaagt sinds het logo in custom_components/gotify/brand/ staat.
