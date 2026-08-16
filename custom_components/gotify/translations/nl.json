@@ -13,7 +13,7 @@
         },
         "data_description": {
           "name": "Bepaalt de servicenaam: een naam als \"Mijn Gotify\" wordt notify.mijn_gotify.",
-          "url": "De basis-URL van je Gotify-server, bijvoorbeeld https://gotify.voorbeeld.nl.",
+          "url": "Het adres waarop je Gotify-server draait, inclusief http of https en zo nodig een poortnummer.",
           "token": "Een applicatietoken uit Gotify (Apps > applicatie aanmaken). Een clienttoken werkt niet.",
           "verify_ssl": "Zet dit alleen uit als je server een zelfondertekend certificaat gebruikt.",
           "msg_blacklist": "Berichten waarvan de tekst precies overeenkomt met een van deze regels worden weggegooid in plaats van verstuurd."
@@ -31,7 +31,7 @@
         },
         "data_description": {
           "name": "Bepaalt de servicenaam: een naam als \"Mijn Gotify\" wordt notify.mijn_gotify.",
-          "url": "De basis-URL van je Gotify-server, bijvoorbeeld https://gotify.voorbeeld.nl.",
+          "url": "Het adres waarop je Gotify-server draait, inclusief http of https en zo nodig een poortnummer.",
           "token": "Een applicatietoken uit Gotify (Apps > applicatie aanmaken). Een clienttoken werkt niet.",
           "verify_ssl": "Zet dit alleen uit als je server een zelfondertekend certificaat gebruikt.",
           "msg_blacklist": "Berichten waarvan de tekst precies overeenkomt met een van deze regels worden weggegooid in plaats van verstuurd."

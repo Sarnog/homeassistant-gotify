@@ -13,7 +13,7 @@
         },
         "data_description": {
           "name": "Determines the service name: a name like \"My Gotify\" becomes notify.my_gotify.",
-          "url": "The base URL of your Gotify server, for example https://gotify.example.com.",
+          "url": "The address where your Gotify server runs, including http or https and, if needed, a port number.",
           "token": "An application token from Gotify (Apps > Create application). A client token will not work.",
           "verify_ssl": "Turn this off only if your server uses a self-signed certificate.",
           "msg_blacklist": "Messages whose text matches one of these entries exactly are discarded instead of sent."
@@ -31,7 +31,7 @@
         },
         "data_description": {
           "name": "Determines the service name: a name like \"My Gotify\" becomes notify.my_gotify.",
-          "url": "The base URL of your Gotify server, for example https://gotify.example.com.",
+          "url": "The address where your Gotify server runs, including http or https and, if needed, a port number.",
           "token": "An application token from Gotify (Apps > Create application). A client token will not work.",
           "verify_ssl": "Turn this off only if your server uses a self-signed certificate.",
           "msg_blacklist": "Messages whose text matches one of these entries exactly are discarded instead of sent."
