@@ -47,9 +47,10 @@ Vanaf versie 2.0.0 wordt de integratie **volledig via de UI ingesteld**; een
 bestaand `notify:`-blok in `configuration.yaml` wordt automatisch overgenomen.
 Zie [Overstappen vanaf YAML](#overstappen-vanaf-yaml).
 
-Vereist Home Assistant 2024.12 of nieuwer.
-
 ### Installatie
+
+**Vereist:** Home Assistant **2024.6** of nieuwer. De integratie gebruikt
+`entry.runtime_data` met een getypeerde config entry, die sinds 2024.6 bestaat.
 
 **Via HACS** (aanbevolen): klik de HACS-badge bovenaan dit bestand, of voeg deze repository
 handmatig toe als **custom repository** in HACS (HACS > drie puntjes > Aangepaste
@@ -252,9 +253,10 @@ As of version 2.0.0 the integration is **configured entirely through the UI**; a
 existing `notify:` block in `configuration.yaml` is imported automatically. See
 [Migrating from YAML](#migrating-from-yaml).
 
-Requires Home Assistant 2024.12 or newer.
-
 ### Installation
+
+**Requires:** Home Assistant **2024.6** or newer. The integration uses
+`entry.runtime_data` with a typed config entry, which exists since 2024.6.
 
 **Via HACS** (recommended): click the HACS badge at the top of this file, or add this
 repository manually as a **custom repository** in HACS (HACS > three dots > Custom
