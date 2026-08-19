@@ -7,3 +7,7 @@ venv/
 
 # Interne samenwerkingsafspraken voor de agent - lokaal houden, niet publiek
 AGENTS.md
+
+# Lokale instellingen van agent-extensies - machinegebonden, niet publiek
+.claude/
+.deepcode/
